@@ -111,7 +111,7 @@
       id: 'marmita-mista', cat: 'marmitas', catLabel: 'Marmitas', tag: 'Mais completa',
       name: 'Marmita Mista 3 Proteínas',
       desc: 'Nossa marmita mais caprichada com 3 proteínas + acompanhamentos frescos do dia.',
-      img: 'assets/food-marmita.jpg',
+      img: 'assets/food-marmita-mista.jpg',
       price: 30,
       groups: MARMITA_GROUPS
     },
@@ -119,7 +119,7 @@
       id: 'marmita-carne-frango', cat: 'marmitas', catLabel: 'Marmitas', tag: 'Dupla proteína',
       name: 'Marmita Carne e Frango',
       desc: 'Combinação de carne e frango com acompanhamentos fresquinhos.',
-      img: 'assets/food-marmita.jpg',
+      img: 'assets/food-marmita-carne-frango.jpg',
       price: 29,
       groups: MARMITA_GROUPS
     },
@@ -127,7 +127,7 @@
       id: 'marmita-carne-toscana', cat: 'marmitas', catLabel: 'Marmitas', tag: 'Dupla proteína',
       name: 'Marmita Carne e Toscana',
       desc: 'Carne suculenta com linguiça toscana na brasa e acompanhamentos do dia.',
-      img: 'assets/food-marmita.jpg',
+      img: 'assets/food-marmita-carne-toscana.jpg',
       price: 29,
       groups: MARMITA_GROUPS
     },
@@ -135,7 +135,7 @@
       id: 'marmita-carne', cat: 'marmitas', catLabel: 'Marmitas', tag: 'Tradicional',
       name: 'Marmita de Carne',
       desc: 'Marmita servida com carne temperada na medida certa e acompanhamentos inclusos.',
-      img: 'assets/food-marmita.jpg',
+      img: 'assets/food-marmita-carne.jpg',
       price: 28,
       groups: MARMITA_GROUPS
     },
@@ -143,7 +143,7 @@
       id: 'marmita-toscana', cat: 'marmitas', catLabel: 'Marmitas', tag: 'Na brasa',
       name: 'Marmita de Toscana',
       desc: 'Marmita com linguiça toscana assada na brasa e acompanhamentos completos.',
-      img: 'assets/food-marmita.jpg',
+      img: 'assets/food-marmita-toscana.jpg',
       price: 28,
       groups: MARMITA_GROUPS
     },
@@ -151,7 +151,7 @@
       id: 'marmita-frango', cat: 'marmitas', catLabel: 'Marmitas', tag: 'Melhor custo',
       name: 'Marmita de Frango',
       desc: 'Marmita com frango assado na brasa e acompanhamentos frescos. Sabor no seu dia a dia.',
-      img: 'assets/food-marmita.jpg',
+      img: 'assets/food-marmita-frango.jpg',
       price: 27,
       groups: MARMITA_GROUPS
     },
