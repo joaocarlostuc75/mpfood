@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14100d">
+<meta name="description" content="M&P Drive Thru em Tucuruí/PA — frango e tambaqui assados na brasa, churrasco, marmitas, vendas no pote e açaí. Monte seu pedido online e retire no balcão ou Drive Thru.">
+<title>M&amp;P Drive Thru | Brasa, Marmitas e Açaí em Tucuruí/PA</title>
+
+<!-- Open Graph / WhatsApp / Instagram -->
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="M&amp;P Drive Thru — O legítimo sabor da brasa no seu almoço">
+<meta property="og:description" content="Frango assado, tambaqui na brasa, marmitas, vendas no pote e açaí. Peça online e retire no balcão ou Drive Thru sem sair do carro. Bairro Cohab, Tucuruí/PA.">
+<meta property="og:image" content="assets/ambiente-fachada.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Pré-carregamento da fachada principal (LCP) -->
+<link rel="preload" as="image" href="assets/ambiente-fachada.jpg" fetchpriority="high">
+
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ec4622'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial Black,Arial,sans-serif' font-size='24' font-weight='900' fill='white'%3EM%26P%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+
+<!-- Dados estruturados para Google / SEO Local -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "M&P Drive Thru",
+  "description": "Frango e tambaqui assados na brasa, churrasco, marmitas, vendas no pote e açaí exclusivos para retirada no balcão e Drive Thru em Tucuruí/PA.",
+  "image": "assets/ambiente-fachada.jpg",
+  "telephone": "+55-94-98118-2223",
+  "priceRange": "R$",
+  "servesCuisine": ["Brasileira", "Churrasco", "Marmitas", "Açaí"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "TV W03, Quadra 19, nº 203",
+    "addressLocality": "Tucuruí",
+    "addressRegion": "PA",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "10:00",
+      "closes": "14:00"
+    }
+  ],
+  "sameAs": ["https://www.instagram.com/mp_drive_thru"]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#cardapio">Ir direto para o cardápio</a>
+
+<!-- ===== Sprite de ícones SVG inline (zero dependências externas) ===== -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.6L21 8H6.2"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M20.8 11.6a8.4 8.4 0 0 1-12.3 7.4L3.2 20.5l1.5-5.2A8.4 8.4 0 1 1 20.8 11.6Z"/><path d="M8.4 9.6c.1 3.1 2.6 5.6 5.7 5.7l.9-1.5-2-1-.8 1.2a7 7 0 0 1-2.5-2.5l1.2-.8-1-2-1.5.9Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h3l1.4 4-2 1.4a12 12 0 0 0 5.6 5.6l1.4-2 4 1.4v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.3l3.4 2"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.9" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6.5 7l1 13h9l1-13M10 11v5M14 11v5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12.5 2.5c1.2 4-2.3 5.3-2.3 8.2 0 1.4.8 2.3 1.9 2.3 1.3 0 2-1.2 1.7-2.6 2.6 2 4.2 4.6 4.2 7.1a6 6 0 0 1-12 0c0-3.6 2.4-6 4-8.2.5 1.4 1.4 2 2.3 2.2.6-3.3-.6-6.6.2-9Z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 15.5 5.7 9a2 2 0 0 1 1.9-1.4h8.8a2 2 0 0 1 1.9 1.4L20 15.5"/><path d="M3.5 15.5h17v3.2h-2.2v-1.4H7.7v1.4H3.5z"/><circle cx="7.5" cy="15.5" r="1.2"/><circle cx="16.5" cy="15.5" r="1.2"/><path d="M6.5 12h11"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M4 11h16a7 7 0 0 1-14 0Z"/><path d="M8 18h8"/><path d="M9 7c0-1.2.8-1.8.8-3M14.5 7c0-1.2.8-1.8.8-3"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M6 8h12l-1.3 11a2 2 0 0 1-2 1.8H9.3a2 2 0 0 1-2-1.8L6 8Z"/><path d="M4.5 8h15"/><path d="M8.5 8a3.5 3.5 0 0 1 7 0"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m15.5 15.5 4.2 4.2"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 5h6v6M19 5l-9 9"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8L12 3Z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+</svg>
+
+<!-- ===== Cabeçalho (faixa de status no topo + barra de navegação fiel à identidade M&P) ===== -->
+<header class="site-header" id="topo">
+  <div class="header-status" id="header-status"></div>
+  <div class="container header-inner">
+    <a class="brand" href="#topo" aria-label="M&P Drive Thru — voltar ao início">
+      <span class="brand-plaque" aria-hidden="true">
+        <svg viewBox="0 0 128 50" role="img" aria-label="Logotipo M&P">
+          <text x="2" y="34" font-family="Arial Black, 'Segoe UI', sans-serif" font-size="37" font-weight="900" letter-spacing="-2.5" fill="#ec4622">M</text>
+          <text x="58" y="34" font-family="Arial Black, 'Segoe UI', sans-serif" font-size="37" font-weight="900" letter-spacing="-2.5" fill="#ec4622">P</text>
+          <text x="38" y="32" font-family="Arial Black, 'Segoe UI', sans-serif" font-size="25" font-weight="900" fill="#ffffff">&amp;</text>
+          <text x="3" y="47" font-family="'Segoe UI', Arial, sans-serif" font-size="10.2" font-weight="800" letter-spacing="2.3" fill="#f8f1e9">DRIVE THRU</text>
+        </svg>
+      </span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Navegação principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#ambiente">Nosso Espaço</a>
+      <a href="#servicos">Como Retirar</a>
+      <a href="#como-chegar">Como Chegar</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-phone" href="https://wa.me/5594981182223?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20para%20retirada!" target="_blank" rel="noopener" aria-label="WhatsApp (94) 98118-2223">
+        <svg class="icon"><use href="#i-wa"/></svg><span>(94) 98118-2223</span>
+      </a>
+      <button class="cart-btn" id="open-cart" type="button" aria-label="Abrir carrinho de compras">
+        <svg class="icon"><use href="#i-cart"/></svg>
+        <span class="cart-btn-label">Meu Pedido</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-nav">
+        <svg class="icon"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ===== Hero com Fachada Real em Destaque ===== -->
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="hero-pill">
+          <svg class="icon"><use href="#i-pin"/></svg>
+          TV W03, QUADRA 19, Nº 203 · COHAB · TUCURUÍ/PA
+        </span>
+        <h1 id="hero-title">O legítimo sabor da <em>brasa</em> no seu almoço.</h1>
+        <p class="hero-lead">Frango assado, tambaqui na brasa, marmitas e refeições no pote. Monte seu pedido online e retire no balcão ou no Drive Thru — rápido, quentinho e sem sair do carro.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#cardapio">
+            <svg class="icon"><use href="#i-flame"/></svg> Ver Cardápio &amp; Pedir
+          </a>
+          <a class="btn btn-ghost btn-lg" href="https://wa.me/5594981182223?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20para%20retirada!" target="_blank" rel="noopener">
+            <svg class="icon icon-wa"><use href="#i-wa"/></svg> Pedir no WhatsApp
+          </a>
+        </div>
+
+        <ul class="hero-checks" aria-label="Diferenciais do atendimento">
+          <li><svg class="icon"><use href="#i-check"/></svg> 100% Retirada (Sem taxas)</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Drive Thru sem sair do carro</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Balcão ágil · 10h às 14h</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Brasa legítima (fecha terça)</li>
+        </ul>
+      </div>
+
+      <!-- Vitrine visual com a fachada real da loja + destaques na brasa -->
+      <div class="hero-showcase">
+        <div class="hero-loc-pill">
+          <span class="hero-loc-icon"><svg class="icon"><use href="#i-pin"/></svg></span>
+          <div>
+            <strong>Nossa loja no Cohab — TV W03, 203</strong>
+            <small>Mesma rua da Loja do Sérgio</small>
+            <span id="hero-open-badge" class="open-badge">Verificando horário…</span>
+          </div>
+        </div>
+
+        <figure class="hero-facade-frame">
+          <img src="assets/ambiente-fachada.jpg" alt="Fachada oficial do M&P Drive Thru na TV W03 nº 203, Bairro Cohab, Tucuruí/PA" width="1080" height="1440" fetchpriority="high" decoding="async">
+        </figure>
+
+        <button class="hero-dish-card hero-dish-card--left" type="button" data-hero-product="frango-inteiro" aria-label="Ver Frango Assado Inteiro">
+          <img src="assets/food-frango.jpg" alt="Frango Assado na Brasa" loading="eager" decoding="async">
+          <span><strong>Frango na Brasa</strong><small>a partir de R$ 25</small></span>
+        </button>
+
+        <button class="hero-dish-card hero-dish-card--right" type="button" data-hero-product="tambaqui-inteiro" aria-label="Ver Tambaqui Assado na Brasa">
+          <img src="assets/food-peixe.jpg" alt="Tambaqui Assado na Brasa" loading="eager" decoding="async">
+          <span><strong>Tambaqui</strong><small>a partir de R$ 50</small></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Barra de acesso rápido às categorias do cardápio -->
+    <div class="hero-cat-bar" aria-label="Acesso rápido às categorias">
+      <div class="container hero-cat-grid">
+        <button type="button" class="hero-cat-btn" data-jump-cat="brasa">
+          <svg class="icon"><use href="#i-flame"/></svg><span>Na Brasa</span>
+        </button>
+        <button type="button" class="hero-cat-btn" data-jump-cat="marmitas">
+          <svg class="icon"><use href="#i-bowl"/></svg><span>Marmitas</span>
+        </button>
+        <button type="button" class="hero-cat-btn" data-jump-cat="pote">
+          <svg class="icon"><use href="#i-bag"/></svg><span>Vendas no Pote</span>
+        </button>
+        <button type="button" class="hero-cat-btn" data-jump-cat="acai-buffet">
+          <svg class="icon"><use href="#i-cup"/></svg><span>Açaí &amp; Buffet</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 01 / Cardápio ===== -->
+  <section class="section section-menu" id="cardapio" aria-labelledby="cardapio-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">01 / Cardápio</span>
+        <h2 id="cardapio-title">Escolha, personalize<br>e <em>retire quentinho</em></h2>
+        <p>Todos os nossos pratos na brasa, marmitas, potes, açaí e buffet. Monte seu pedido e envie pronto para o nosso WhatsApp.</p>
+      </div>
+
+      <div id="preorder-slot" aria-live="polite"></div>
+
+      <div class="menu-toolbar reveal">
+        <div class="category-tabs" id="category-tabs" role="tablist" aria-label="Categorias do cardápio"></div>
+        <label class="menu-search">
+          <svg class="icon"><use href="#i-search"/></svg>
+          <input type="search" id="menu-search" placeholder="Buscar frango, tambaqui, marmita, açaí…" aria-label="Buscar no cardápio">
+        </label>
+      </div>
+
+      <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+
+      <div class="menu-footnote reveal">
+        <svg class="icon"><use href="#i-info"/></svg>
+        <p>Imagens dos pratos meramente ilustrativas; fotos da seção Nosso Espaço e da fachada são reais da nossa loja. <strong>Trabalhamos exclusivamente com retirada no balcão e Drive Thru</strong>, sem taxas adicionais. Disponibilidade e horário são confirmados no WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 02 / Nosso Espaço ===== -->
+  <section class="section section-ambiente" id="ambiente" aria-labelledby="ambiente-title">
+    <div class="container">
+      <div class="ambiente-top">
+        <div class="section-head section-head--left reveal">
+          <span class="kicker">02 / Nosso espaço</span>
+          <h2 id="ambiente-title">Um lugar feito<br>para <em>receber bem</em></h2>
+          <p>Salão claro e climatizado, bancada em granito, buffet equipado e a churrasqueira de tijolos onde a brasa trabalha o dia todo. Conforto para retirar seu pedido ou servir-se no buffet.</p>
+          <ul class="feature-list">
+            <li><svg class="icon"><use href="#i-check"/></svg> Salão amplo e climatizado com acabamento em granito</li>
+            <li><svg class="icon"><use href="#i-check"/></svg> Churrasqueira de tijolos aparente e brasa viva</li>
+            <li><svg class="icon"><use href="#i-check"/></svg> Buffet self-service com rechauds e balcão ágil</li>
+            <li><svg class="icon"><use href="#i-check"/></svg> Cozinha equipada com preparo diário</li>
+          </ul>
+          <a class="btn btn-outline" href="#como-chegar">Ver endereço e rota <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="ambiente-quote reveal">
+          <svg class="icon"><use href="#i-star"/></svg>
+          <p>“Sabor e qualidade no seu dia a dia.”</p>
+          <small>— M&amp;P Drive Thru</small>
+          <img src="assets/ambiente-fachada.jpg" alt="Fachada laranja e branca do M&P Drive Thru na TV W03 nº 203" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      <div class="gallery-head reveal">
+        <h3>Fotos reais do espaço</h3>
+        <span>Toque em qualquer foto para ampliar</span>
+      </div>
+      <div class="gallery-grid" id="gallery-grid">
+        <button class="gallery-item gallery-item--big" type="button" data-index="0" aria-label="Ampliar foto da churrasqueira de tijolos">
+          <img src="assets/ambiente-churrasqueira.jpg" alt="Churrasqueira de tijolos aparente no salão" loading="lazy" decoding="async">
+          <span class="gallery-caption"><strong>Churrasqueira</strong><small>Onde a brasa acontece</small></span>
+        </button>
+        <button class="gallery-item" type="button" data-index="1" aria-label="Ampliar foto do balcão de atendimento">
+          <img src="assets/ambiente-balcao.jpg" alt="Balcão de atendimento em granito" loading="lazy" decoding="async">
+          <span class="gallery-caption"><strong>Balcão</strong><small>Retirada rápida</small></span>
+        </button>
+        <button class="gallery-item gallery-item--tall" type="button" data-index="2" aria-label="Ampliar foto da cozinha">
+          <img src="assets/ambiente-cozinha.jpg" alt="Cozinha equipada com armários claros e pendentes" loading="lazy" decoding="async">
+          <span class="gallery-caption"><strong>Cozinha</strong><small>Preparo diário</small></span>
+        </button>
+        <button class="gallery-item" type="button" data-index="3" aria-label="Ampliar foto do salão">
+          <img src="assets/ambiente-salao.jpg" alt="Salão amplo e claro com geladeira expositora" loading="lazy" decoding="async">
+          <span class="gallery-caption"><strong>Salão</strong><small>Claro e acolhedor</small></span>
+        </button>
+        <button class="gallery-item" type="button" data-index="4" aria-label="Ampliar foto do buffet">
+          <img src="assets/ambiente-buffet.jpg" alt="Buffet self-service com rechauds de inox" loading="lazy" decoding="async">
+          <span class="gallery-caption"><strong>Buffet</strong><small>Self-service</small></span>
+        </button>
+        <button class="gallery-item gallery-item--wide" type="button" data-index="5" aria-label="Ampliar foto do peixe na grelha">
+          <img src="assets/ambiente-peixe.jpg" alt="Tambaqui assado na grelha sendo preparado na loja" loading="lazy" decoding="async">
+          <span class="gallery-caption"><strong>Peixe na brasa</strong><small>Assado na hora</small></span>
+        </button>
+        <button class="gallery-item" type="button" data-index="6" aria-label="Ampliar foto do prato servido">
+          <img src="assets/ambiente-prato.jpg" alt="Prato servido com carne, feijão, salada e macarrão" loading="lazy" decoding="async">
+          <span class="gallery-caption"><strong>Na medida certa</strong><small>Prato servido na casa</small></span>
+        </button>
+        <button class="gallery-item" type="button" data-index="7" aria-label="Ampliar foto da fachada">
+          <img src="assets/ambiente-fachada.jpg" alt="Fachada oficial do M&P Drive Thru com letreiro em destaque" loading="lazy" decoding="async">
+          <span class="gallery-caption"><strong>Fachada</strong><small>Fácil de encontrar no Cohab</small></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 03 / Como Retirar ===== -->
+  <section class="section section-services" id="servicos" aria-labelledby="servicos-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">03 / Como retirar</span>
+        <h2 id="servicos-title">Dois jeitos práticos de buscar</h2>
+        <p>Trabalhamos exclusivamente com retiradas. Você monta o pedido aqui, combina o horário no WhatsApp e leva tudo quentinho sem fila.</p>
+      </div>
+      <div class="services-grid services-grid--two reveal">
+        <article class="service-card">
+          <span class="service-icon"><svg class="icon"><use href="#i-bag"/></svg></span>
+          <span class="service-num">01</span>
+          <h3>Retirada no balcão</h3>
+          <p>Encomende antes pelo site, chegue no horário combinado e retire seu pedido embalado, quentinho e pronto para levar.</p>
+          <span class="service-note">Sem taxa · retirada rápida</span>
+        </article>
+        <article class="service-card service-card--featured">
+          <span class="service-icon"><svg class="icon"><use href="#i-car"/></svg></span>
+          <span class="service-num">02</span>
+          <h3>Drive Thru</h3>
+          <p>Faça o pedido pelo WhatsApp, informe o horário em que vai passar e receba direto no seu carro. Praticidade total no seu almoço.</p>
+          <span class="service-note">Sem taxa · retire sem sair do carro</span>
+        </article>
+      </div>
+      <div class="steps reveal" aria-label="Passos para pedir">
+        <div class="step"><span>1</span><div><strong>Escolha</strong><small>Selecione pratos, marmitas e acompanhamentos</small></div></div>
+        <div class="step-arrow"><svg class="icon"><use href="#i-arrow"/></svg></div>
+        <div class="step"><span>2</span><div><strong>Envie no WhatsApp</strong><small>Escolha balcão ou Drive Thru e o horário</small></div></div>
+        <div class="step-arrow"><svg class="icon"><use href="#i-arrow"/></svg></div>
+        <div class="step"><span>3</span><div><strong>Passe para retirar</strong><small>Seu pedido já fica pronto e quentinho</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 04 / Como Chegar ===== -->
+  <section class="section section-location" id="como-chegar" aria-labelledby="location-title">
+    <div class="container">
+      <div class="section-head section-head--left reveal">
+        <span class="kicker">04 / Como chegar</span>
+        <h2 id="location-title">Estamos no <em>Cohab</em>,<br>pertinho de você</h2>
+        <p>Encomende antes pelo site e passe só para retirar. Se preferir, abra direto no GPS ou copie nosso endereço.</p>
+      </div>
+
+      <div class="location-grid">
+        <div class="map-panel reveal">
+          <svg class="map-illustration" viewBox="0 0 640 460" role="img" aria-label="Mapa ilustrativo da localização do M&P Drive Thru no bairro Cohab, Tucuruí">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,.035)" stroke-width="1"/></pattern>
+              <linearGradient id="mapglow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b211c"/><stop offset="1" stop-color="#15100d"/></linearGradient>
+            </defs>
+            <rect width="640" height="460" fill="url(#mapglow)"/>
+            <rect width="640" height="460" fill="url(#grid)"/>
+            <g fill="rgba(255,255,255,.035)" stroke="rgba(255,255,255,.05)">
+              <rect x="40" y="40" width="150" height="110" rx="6"/><rect x="215" y="40" width="170" height="110" rx="6"/><rect x="410" y="40" width="190" height="110" rx="6"/>
+              <rect x="40" y="180" width="150" height="120" rx="6"/><rect x="410" y="180" width="190" height="120" rx="6"/>
+              <rect x="40" y="330" width="150" height="95" rx="6"/><rect x="215" y="330" width="170" height="95" rx="6"/><rect x="410" y="330" width="190" height="95" rx="6"/>
+            </g>
+            <g stroke="rgba(255,255,255,.13)" stroke-width="14" stroke-linecap="round">
+              <path d="M0 165H640"/><path d="M0 315H640"/><path d="M200 0V460"/><path d="M395 0V460"/>
+            </g>
+            <g stroke="rgba(255,255,255,.055)" stroke-width="2" stroke-dasharray="10 12">
+              <path d="M0 165H640"/><path d="M0 315H640"/><path d="M200 0V460"/><path d="M395 0V460"/>
+            </g>
+            <path d="M0 245 L200 245 L200 165 L395 165 L395 245 L640 245" fill="none" stroke="#ec4622" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".88"/>
+            <path d="M0 245 L200 245 L200 165 L395 165 L395 245 L640 245" fill="none" stroke="#ffba4a" stroke-width="2" stroke-dasharray="6 10" stroke-linecap="round" opacity=".9"/>
+            <g fill="rgba(255,255,255,.42)" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">
+              <text x="18" y="238">TV W03</text><text x="215" y="155">QUADRA 19</text><text x="420" y="308">BAIRRO COHAB</text>
+              <text x="45" y="65">COHAB</text><text x="440" y="65">TUCURUÍ - PA</text>
+            </g>
+            <g transform="translate(320 205)">
+              <circle r="34" fill="rgba(236,70,34,.16)"/><circle r="22" fill="rgba(236,70,34,.26)"/>
+              <path d="M0 -34c-11 0-19 8.6-19 19.2C-19 -3 0 15 0 15s19-18 19-29.8C19 -25.4 11 -34 0 -34Z" fill="#ec4622" stroke="#fff" stroke-width="2.5"/>
+              <circle cy="-15" r="6" fill="#fff"/>
+              <text x="0" y="36" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="15" font-weight="900">M&amp;P</text>
+              <text x="0" y="53" text-anchor="middle" fill="rgba(255,255,255,.65)" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">Nº 203</text>
+            </g>
+          </svg>
+          <div class="map-legend">
+            <span><i></i> Mapa ilustrativo — abra a rota no GPS</span>
+            <span class="map-coord">Tucuruí · Pará</span>
+          </div>
+        </div>
+
+        <div class="location-info reveal">
+          <div class="info-card info-card--address">
+            <span class="info-icon"><svg class="icon"><use href="#i-pin"/></svg></span>
+            <div>
+              <small>Endereço</small>
+              <h3>TV W03, Quadra 19, nº 203</h3>
+              <p>Bairro Cohab · Tucuruí/PA</p>
+              <span class="reference">Ponto de referência: mesma rua da Loja do Sérgio</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-icon"><svg class="icon"><use href="#i-clock"/></svg></span>
+            <div>
+              <small>Horário de atendimento</small>
+              <h3>Segunda a domingo · 10h às 14h</h3>
+              <p>Fechado às terças-feiras</p>
+              <span class="status-line" id="location-status">Verificando horário…</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-icon"><svg class="icon"><use href="#i-phone"/></svg></span>
+            <div>
+              <small>Pedidos &amp; encomendas</small>
+              <h3>(94) 98118-2223</h3>
+              <p>WhatsApp e ligações</p>
+            </div>
+          </div>
+          <div class="location-buttons">
+            <a class="btn btn-primary" id="maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=TV+W03+Quadra+19+203+Cohab+Tucurui+PA" target="_blank" rel="noopener"><svg class="icon"><use href="#i-pin"/></svg> Google Maps <svg class="icon"><use href="#i-external"/></svg></a>
+            <a class="btn btn-outline" id="waze-link" href="https://www.waze.com/ul?q=TV%20W03%20Quadra%2019%20203%20Cohab%20Tucurui%20PA" target="_blank" rel="noopener"><svg class="icon"><use href="#i-car"/></svg> Waze <svg class="icon"><use href="#i-external"/></svg></a>
+            <button class="btn btn-outline btn-copy" id="copy-address-btn" type="button" data-copy="TV W03, Quadra 19, nº 203 — Bairro Cohab, Tucuruí/PA (mesma rua da Loja do Sérgio)">
+              <svg class="icon"><use href="#i-copy"/></svg> <span>Copiar endereço</span>
+            </button>
+          </div>
+          <div class="drive-note">
+            <svg class="icon"><use href="#i-car"/></svg>
+            <p><strong>Vem de carro?</strong> Faça o pedido pelo WhatsApp antes de sair, informe o horário e retire no Drive Thru sem sair do veículo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 05 / Dúvidas ===== -->
+  <section class="section section-faq" id="duvidas" aria-labelledby="faq-title">
+    <div class="container faq-grid">
+      <div class="section-head section-head--left reveal">
+        <span class="kicker">05 / Dúvidas frequentes</span>
+        <h2 id="faq-title">Antes de <em>pedir</em></h2>
+        <p>Respostas rápidas sobre horários, retirada e pagamento. Precisa de algo específico? Fale direto conosco.</p>
+        <a class="btn btn-whatsapp" href="https://wa.me/5594981182223?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20card%C3%A1pio!" target="_blank" rel="noopener"><svg class="icon"><use href="#i-wa"/></svg> Falar no WhatsApp</a>
+      </div>
+      <div class="faq-list reveal">
+        <details open><summary>Qual é o horário de funcionamento?<span>+</span></summary><p>Atendemos de segunda a domingo, das <strong>10h às 14h</strong>. Às <strong>terças-feiras</strong> não abrimos.</p></details>
+        <details><summary>Como funciona a retirada dos pedidos?<span>+</span></summary><p>Trabalhamos exclusivamente com <strong>retirada no balcão e Drive Thru</strong>, sem nenhuma taxa adicional. Monte seu pedido pelo site, confirme o horário no WhatsApp e passe só para buscar.</p></details>
+        <details><summary>Como funciona o Drive Thru?<span>+</span></summary><p>Após enviar o pedido pelo WhatsApp e combinar o horário, basta chegar à nossa loja no Cohab (TV W03, nº 203) que levamos o pedido pronto <strong>sem você precisar sair do carro</strong>.</p></details>
+        <details><summary>Posso personalizar o meu pedido?<span>+</span></summary><p>Sim. Nas marmitas você pode desmarcar os acompanhamentos que não quiser, além de escolher quantidades e enviar observações diretas para a cozinha.</p></details>
+        <details><summary>Quais formas de pagamento vocês aceitam?<span>+</span></summary><p>No checkout você pode indicar Pix, dinheiro (com opção de informar troco), débito, crédito ou “a combinar”. O pagamento é realizado na retirada ou combinado no WhatsApp.</p></details>
+        <details><summary>Posso encomendar antes das 10h?<span>+</span></summary><p>Sim! Você pode montar o carrinho a qualquer hora e enviar pelo WhatsApp para agendar sua retirada no próximo horário de atendimento.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA final ===== -->
+  <section class="final-cta" aria-label="Faça seu pedido">
+    <div class="container final-cta-inner reveal">
+      <div><span class="kicker">Bateu a fome?</span><h2>Seu almoço pronto para <em>retirar</em>.</h2><p>Escolha no cardápio, envie para o nosso WhatsApp e passe no balcão ou Drive Thru sem enfrentar fila.</p></div>
+      <div class="final-cta-actions"><a class="btn btn-primary btn-lg" href="#cardapio">Montar meu pedido <svg class="icon"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost btn-lg" href="https://wa.me/5594981182223" target="_blank" rel="noopener"><svg class="icon"><use href="#i-wa"/></svg> (94) 98118-2223</a></div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== Rodapé ===== -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#topo" aria-label="M&P Drive Thru — início">
+        <span class="brand-plaque" aria-hidden="true">
+          <svg viewBox="0 0 128 50"><text x="2" y="34" font-family="Arial Black, 'Segoe UI', sans-serif" font-size="37" font-weight="900" letter-spacing="-2.5" fill="#ec4622">M</text><text x="58" y="34" font-family="Arial Black, 'Segoe UI', sans-serif" font-size="37" font-weight="900" letter-spacing="-2.5" fill="#ec4622">P</text><text x="38" y="32" font-family="Arial Black, 'Segoe UI', sans-serif" font-size="25" font-weight="900" fill="#ffffff">&amp;</text><text x="3" y="47" font-family="'Segoe UI', Arial, sans-serif" font-size="10.2" font-weight="800" letter-spacing="2.3" fill="#f8f1e9">DRIVE THRU</text></svg>
+        </span>
+      </a>
+      <p>Frango e peixe assados na brasa, churrasco, marmitas, vendas no pote e açaí para retirada no balcão e Drive Thru em Tucuruí/PA.</p>
+      <a class="social-link" href="https://www.instagram.com/mp_drive_thru" target="_blank" rel="noopener"><svg class="icon"><use href="#i-insta"/></svg> @mp_drive_thru <svg class="icon"><use href="#i-external"/></svg></a>
+    </div>
+    <div class="footer-col"><h4>Navegação</h4><a href="#cardapio">Cardápio</a><a href="#ambiente">Nosso Espaço</a><a href="#servicos">Como Retirar</a><a href="#como-chegar">Como Chegar</a><a href="#duvidas">Dúvidas</a></div>
+    <div class="footer-col"><h4>Atendimento</h4><span>Segunda a domingo</span><span>10h às 14h</span><span>Fechado às terças</span><span>Apenas retirada</span><a href="tel:+5594981182223">(94) 98118-2223</a><a href="https://wa.me/5594981182223" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div class="footer-col"><h4>Onde estamos</h4><span>TV W03, Quadra 19, nº 203</span><span>Bairro Cohab</span><span>Tucuruí · Pará</span><a href="https://www.google.com/maps/search/?api=1&amp;query=TV+W03+Quadra+19+203+Cohab+Tucurui+PA" target="_blank" rel="noopener">Abrir no mapa <svg class="icon"><use href="#i-external"/></svg></a></div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© <span id="year"></span> M&amp;P Drive Thru · Tucuruí/PA.</small>
+    <small>Atendimento exclusivo para retirada no balcão e Drive Thru. Valores sujeitos à confirmação no WhatsApp.</small>
+  </div>
+</footer>
+
+<!-- ===== Camadas: overlay, carrinho, modais, lightbox ===== -->
+<div class="overlay" id="overlay" hidden></div>
+
+<aside class="drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+  <div class="drawer-head">
+    <div><span class="kicker">Seu pedido</span><h2 id="cart-title">Carrinho <span id="cart-title-count">(0)</span></h2></div>
+    <button class="icon-btn" type="button" data-close aria-label="Fechar carrinho"><svg class="icon"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="drawer-body" id="cart-body"></div>
+  <div class="drawer-foot" id="cart-foot"></div>
+</aside>
+
+<div class="modal" id="product-modal" role="dialog" aria-modal="true" aria-labelledby="product-modal-title" aria-hidden="true">
+  <button class="icon-btn modal-close" type="button" data-close aria-label="Fechar"><svg class="icon"><use href="#i-x"/></svg></button>
+  <div class="modal-body" id="product-modal-body"></div>
+</div>
+
+<div class="modal modal--checkout" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" aria-hidden="true">
+  <button class="icon-btn modal-close" type="button" data-close aria-label="Fechar"><svg class="icon"><use href="#i-x"/></svg></button>
+  <div class="modal-body" id="checkout-body"></div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Fotos do ambiente" aria-hidden="true">
+  <button class="icon-btn lightbox-close" type="button" data-close aria-label="Fechar galeria"><svg class="icon"><use href="#i-x"/></svg></button>
+  <button class="lightbox-nav lightbox-nav--prev" type="button" id="lb-prev" aria-label="Foto anterior"><svg class="icon"><use href="#i-left"/></svg></button>
+  <figure><img id="lb-image" src="" alt=""><figcaption id="lb-caption"></figcaption></figure>
+  <button class="lightbox-nav lightbox-nav--next" type="button" id="lb-next" aria-label="Próxima foto"><svg class="icon"><use href="#i-right"/></svg></button>
+  <span class="lightbox-counter" id="lb-counter"></span>
+</div>
+
+<a class="wa-float" href="https://wa.me/5594981182223?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido%20para%20retirada!" target="_blank" rel="noopener" aria-label="Falar com o M&P Drive Thru no WhatsApp">
+  <svg class="icon"><use href="#i-wa"/></svg><span>Peça aqui</span>
+</a>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>

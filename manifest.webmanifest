@@ -1,0 +1,10 @@
+{
+  "name": "M&P Drive Thru — Cardápio Online",
+  "short_name": "M&P Drive Thru",
+  "description": "Frango e tambaqui assados na brasa, marmitas, vendas no pote e açaí para retirada no balcão e Drive Thru em Tucuruí/PA.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#14100d",
+  "theme_color": "#ec4622",
+  "lang": "pt-BR"
+}

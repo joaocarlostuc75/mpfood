@@ -1,0 +1,15 @@
+# Vercel
+.vercel
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editores / Logs / Variáveis
+.vscode/
+.idea/
+*.log
+.env
+.env.*
+node_modules/
