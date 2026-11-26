@@ -12,6 +12,8 @@
     phoneLabel: '(94) 98118-2223',
     instagram: 'https://www.instagram.com/mp_drive_thru',
     address: 'TV W03, Quadra 19, nº 203 — Bairro Cohab, Tucuruí/PA (mesma rua da Loja do Sérgio)',
+    // Para pino exato por GPS, basta trocar o texto abaixo por 'latitude,longitude' (ex.: '-3.76..., -49.67...')
+    mapQuery: 'Tv. W 3, 203 - COHAB, Tucuruí - PA, 68459-589',
     hours: 'Segunda a domingo, das 10h às 14h (fechado às terças-feiras)'
   };
 
@@ -1173,6 +1175,43 @@
     $$('.reveal').forEach((el) => el.classList.add('is-visible'));
   }
 
+  /* ---------- Google Maps interativo (Mapa / Satélite + links sincronizados) ---------- */
+  function initInteractiveMap() {
+    const iframe = $('#gmaps-iframe');
+    const stage = $('#map-stage');
+    if (!iframe) return;
+
+    const q = encodeURIComponent(STORE.mapQuery);
+    const buildSrc = (mode) => `https://maps.google.com/maps?q=${q}&t=${mode}&z=17&ie=UTF8&iwloc=B&output=embed`;
+
+    // Sincroniza links externos de rota com STORE.mapQuery
+    const mapsLink = $('#maps-link');
+    const routeLink = $('#map-route-link');
+    const wazeLink = $('#waze-link');
+    if (mapsLink) mapsLink.href = `https://www.google.com/maps/search/?api=1&query=${q}`;
+    if (routeLink) routeLink.href = `https://www.google.com/maps/dir/?api=1&destination=${q}`;
+    if (wazeLink) wazeLink.href = `https://www.waze.com/ul?q=${q}`;
+
+    iframe.addEventListener('load', () => {
+      if (stage) stage.classList.remove('is-loading');
+    });
+
+    const buttons = $$('[data-map-mode]');
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const mode = btn.dataset.mapMode || 'm';
+        if (btn.classList.contains('is-active')) return;
+        buttons.forEach((b) => {
+          const active = b === btn;
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-pressed', String(active));
+        });
+        if (stage) stage.classList.add('is-loading');
+        iframe.src = buildSrc(mode);
+      });
+    });
+  }
+
   /* ---------- Init ---------- */
   renderStatus();
   setInterval(renderStatus, 60000);
@@ -1181,6 +1220,7 @@
   renderCart();
   initGallery();
   initCopyAddress();
+  initInteractiveMap();
   initScrollSpy();
   updateCount();
 })();

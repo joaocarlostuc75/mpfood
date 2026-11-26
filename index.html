@@ -341,42 +341,38 @@
       </div>
 
       <div class="location-grid">
-        <div class="map-panel reveal">
-          <svg class="map-illustration" viewBox="0 0 640 460" role="img" aria-label="Mapa ilustrativo da localização do M&P Drive Thru no bairro Cohab, Tucuruí">
-            <defs>
-              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,.035)" stroke-width="1"/></pattern>
-              <linearGradient id="mapglow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b211c"/><stop offset="1" stop-color="#15100d"/></linearGradient>
-            </defs>
-            <rect width="640" height="460" fill="url(#mapglow)"/>
-            <rect width="640" height="460" fill="url(#grid)"/>
-            <g fill="rgba(255,255,255,.035)" stroke="rgba(255,255,255,.05)">
-              <rect x="40" y="40" width="150" height="110" rx="6"/><rect x="215" y="40" width="170" height="110" rx="6"/><rect x="410" y="40" width="190" height="110" rx="6"/>
-              <rect x="40" y="180" width="150" height="120" rx="6"/><rect x="410" y="180" width="190" height="120" rx="6"/>
-              <rect x="40" y="330" width="150" height="95" rx="6"/><rect x="215" y="330" width="170" height="95" rx="6"/><rect x="410" y="330" width="190" height="95" rx="6"/>
-            </g>
-            <g stroke="rgba(255,255,255,.13)" stroke-width="14" stroke-linecap="round">
-              <path d="M0 165H640"/><path d="M0 315H640"/><path d="M200 0V460"/><path d="M395 0V460"/>
-            </g>
-            <g stroke="rgba(255,255,255,.055)" stroke-width="2" stroke-dasharray="10 12">
-              <path d="M0 165H640"/><path d="M0 315H640"/><path d="M200 0V460"/><path d="M395 0V460"/>
-            </g>
-            <path d="M0 245 L200 245 L200 165 L395 165 L395 245 L640 245" fill="none" stroke="#ec4622" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".88"/>
-            <path d="M0 245 L200 245 L200 165 L395 165 L395 245 L640 245" fill="none" stroke="#ffba4a" stroke-width="2" stroke-dasharray="6 10" stroke-linecap="round" opacity=".9"/>
-            <g fill="rgba(255,255,255,.42)" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">
-              <text x="18" y="238">TV W03</text><text x="215" y="155">QUADRA 19</text><text x="420" y="308">BAIRRO COHAB</text>
-              <text x="45" y="65">COHAB</text><text x="440" y="65">TUCURUÍ - PA</text>
-            </g>
-            <g transform="translate(320 205)">
-              <circle r="34" fill="rgba(236,70,34,.16)"/><circle r="22" fill="rgba(236,70,34,.26)"/>
-              <path d="M0 -34c-11 0-19 8.6-19 19.2C-19 -3 0 15 0 15s19-18 19-29.8C19 -25.4 11 -34 0 -34Z" fill="#ec4622" stroke="#fff" stroke-width="2.5"/>
-              <circle cy="-15" r="6" fill="#fff"/>
-              <text x="0" y="36" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="15" font-weight="900">M&amp;P</text>
-              <text x="0" y="53" text-anchor="middle" fill="rgba(255,255,255,.65)" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">Nº 203</text>
-            </g>
-          </svg>
+        <div class="map-panel reveal" id="map-panel">
+          <div class="map-topbar">
+            <div class="map-topbar-title">
+              <span class="map-live-dot" aria-hidden="true"></span>
+              <div>
+                <strong>M&amp;P Drive Thru · Nº 203</strong>
+                <small>Google Maps interativo · Cohab</small>
+              </div>
+            </div>
+            <div class="map-controls" role="group" aria-label="Modo de visualização do mapa">
+              <button type="button" class="map-mode-btn is-active" data-map-mode="m" aria-pressed="true">Mapa</button>
+              <button type="button" class="map-mode-btn" data-map-mode="k" aria-pressed="false">Satélite</button>
+            </div>
+          </div>
+
+          <div class="map-stage is-loading" id="map-stage">
+            <iframe
+              id="gmaps-iframe"
+              class="map-iframe"
+              title="Localização do M&amp;P Drive Thru no Google Maps — TV W03, Quadra 19, nº 203, Cohab, Tucuruí/PA"
+              src="https://maps.google.com/maps?q=Tv.%20W%203%2C%20203%20-%20COHAB%2C%20Tucuru%C3%AD%20-%20PA%2C%2068459-589&amp;t=m&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
           <div class="map-legend">
-            <span><i></i> Mapa ilustrativo — abra a rota no GPS</span>
-            <span class="map-coord">Tucuruí · Pará</span>
+            <span><i></i> Arraste ou dê zoom · TV W03, nº 203</span>
+            <a class="map-route-link" id="map-route-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Tv.+W+3,+203+-+COHAB,+Tucuru%C3%AD+-+PA,+68459-589" target="_blank" rel="noopener">
+              Traçar rota <svg class="icon"><use href="#i-external"/></svg>
+            </a>
           </div>
         </div>
 
@@ -408,8 +404,8 @@
             </div>
           </div>
           <div class="location-buttons">
-            <a class="btn btn-primary" id="maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=TV+W03+Quadra+19+203+Cohab+Tucurui+PA" target="_blank" rel="noopener"><svg class="icon"><use href="#i-pin"/></svg> Google Maps <svg class="icon"><use href="#i-external"/></svg></a>
-            <a class="btn btn-outline" id="waze-link" href="https://www.waze.com/ul?q=TV%20W03%20Quadra%2019%20203%20Cohab%20Tucurui%20PA" target="_blank" rel="noopener"><svg class="icon"><use href="#i-car"/></svg> Waze <svg class="icon"><use href="#i-external"/></svg></a>
+            <a class="btn btn-primary" id="maps-link" href="https://www.google.com/maps/search/?api=1&amp;query=Tv.+W+3,+203+-+COHAB,+Tucuru%C3%AD+-+PA,+68459-589" target="_blank" rel="noopener"><svg class="icon"><use href="#i-pin"/></svg> Google Maps <svg class="icon"><use href="#i-external"/></svg></a>
+            <a class="btn btn-outline" id="waze-link" href="https://www.waze.com/ul?q=Tv.%20W%203%2C%20203%20COHAB%20Tucurui%20PA%2068459-589" target="_blank" rel="noopener"><svg class="icon"><use href="#i-car"/></svg> Waze <svg class="icon"><use href="#i-external"/></svg></a>
             <button class="btn btn-outline btn-copy" id="copy-address-btn" type="button" data-copy="TV W03, Quadra 19, nº 203 — Bairro Cohab, Tucuruí/PA (mesma rua da Loja do Sérgio)">
               <svg class="icon"><use href="#i-copy"/></svg> <span>Copiar endereço</span>
             </button>
@@ -466,7 +462,7 @@
     </div>
     <div class="footer-col"><h4>Navegação</h4><a href="#cardapio">Cardápio</a><a href="#ambiente">Nosso Espaço</a><a href="#servicos">Como Retirar</a><a href="#como-chegar">Como Chegar</a><a href="#duvidas">Dúvidas</a></div>
     <div class="footer-col"><h4>Atendimento</h4><span>Segunda a domingo</span><span>10h às 14h</span><span>Fechado às terças</span><span>Apenas retirada</span><a href="tel:+5594981182223">(94) 98118-2223</a><a href="https://wa.me/5594981182223" target="_blank" rel="noopener">WhatsApp</a></div>
-    <div class="footer-col"><h4>Onde estamos</h4><span>TV W03, Quadra 19, nº 203</span><span>Bairro Cohab</span><span>Tucuruí · Pará</span><a href="https://www.google.com/maps/search/?api=1&amp;query=TV+W03+Quadra+19+203+Cohab+Tucurui+PA" target="_blank" rel="noopener">Abrir no mapa <svg class="icon"><use href="#i-external"/></svg></a></div>
+    <div class="footer-col"><h4>Onde estamos</h4><span>TV W03, Quadra 19, nº 203</span><span>Bairro Cohab</span><span>Tucuruí · Pará</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Tv.+W+3,+203+-+COHAB,+Tucuru%C3%AD+-+PA,+68459-589" target="_blank" rel="noopener">Abrir no mapa <svg class="icon"><use href="#i-external"/></svg></a></div>
   </div>
   <div class="container footer-bottom">
     <small>© <span id="year"></span> M&amp;P Drive Thru · Tucuruí/PA.</small>
